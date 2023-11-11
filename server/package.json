@@ -1,0 +1,52 @@
+{
+  "name": "gedi",
+  "version": "1.0.0",
+  "description": "MUDIE ecommerce ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "server": "nodemon backend/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "test": "NODE_ENV=test jest --verbose --coverage --testPathPattern --detectOpenHandles backend",
+    "make-badges": "istanbul-badges-readme",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "-": "^0.0.1",
+    "@emailjs/browser": "^3.11.0",
+    "bcryptjs": "^2.4.3",
+    "chapa-nodejs": "^1.2.0",
+    "cloudinary": "^1.37.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8",
+    "mongoose-algolia": "^1.10.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.12",
+    "react-icons": "^4.8.0",
+    "react-paypal-button-v2": "^2.6.3",
+    "react-phone-input-2": "^2.15.1",
+    "react-phone-number-input": "^3.2.22",
+    "react-router-bootstrap": "^0.25.0",
+    "save": "^2.9.0",
+    "stripe": "^11.16.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.0",
+    "concurrently": "^6.2.1",
+    "istanbul-badges-readme": "^1.6.0",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
