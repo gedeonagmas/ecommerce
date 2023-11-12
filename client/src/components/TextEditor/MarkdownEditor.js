@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "codemirror/lib/codemirror.css";
-import "codemirror/theme/nord.css";
-import "codemirror/theme/solarized.css";
-import "codemirror/theme/monokai.css";
-import "codemirror/theme/gruvbox-dark.css";
-import "codemirror/mode/markdown/markdown";
-import "codemirror/keymap/sublime";
-import "codemirror/keymap/vim";
-import "codemirror/keymap/emacs";
-import ReactMarkdown from "react-markdown";
+// import "codemirror/lib/codemirror.css";
+// import "codemirror/theme/nord.css";
+// import "codemirror/theme/solarized.css";
+// import "codemirror/theme/monokai.css";
+// import "codemirror/theme/gruvbox-dark.css";
+// import "codemirror/mode/markdown/markdown";
+// import "codemirror/keymap/sublime";
+// import "codemirror/keymap/vim";
+// import "codemirror/keymap/emacs";
+// import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -186,12 +186,12 @@ const MarkdownEditor = (props) => {
             keyMap: keybinding,
           }}
         />
-        <ReactMarkdown
-          components={components}
-          children={text}
-          className={markdownClass}
-          remarkPlugins={[remarkGfm]}
-        />
+        // <ReactMarkdown
+        //   components={components}
+        //   children={text}
+        //   className={markdownClass}
+        //   remarkPlugins={[remarkGfm]}
+        // />
       </div>
     </div>
   );
