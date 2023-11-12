@@ -223,12 +223,6 @@ const ProductEditScreen = ({ match, history }) => {
 
             <Form.Group className="mt-3" controlId="description">
               <Form.Label>Description</Form.Label>
-              <Form.File
-                className="mb-3"
-                id="image-file"
-                custom
-                onChange={uploadImageForDesc}
-              ></Form.File>
               <textarea placeholder="Description" value={description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
               </textarea> 
               {uploadingDesc && <Loader />}
