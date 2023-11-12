@@ -8,7 +8,7 @@ import Loader from "../../../../components/Loader";
 import { createProduct } from "../../../../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../../../../constants/productConstants";
 import DropNotif from "../../../../components/Modal/Modal";
-import MarkdownEditor from "../../../../components/TextEditor/MarkdownEditor";
+// import MarkdownEditor from "../../../../components/TextEditor/MarkdownEditor";
 
 const ProductCreateScreen = ({ match, history }) => {
   const [name, setName] = useState("");
@@ -85,9 +85,6 @@ const ProductCreateScreen = ({ match, history }) => {
     }
   };
 
-  const onChange = (value) => {
-    setDescription(value);
-  };
   return (
     <>
       <Container className="mb-5">
@@ -188,12 +185,13 @@ const ProductCreateScreen = ({ match, history }) => {
                 <option value="Automobile">Automobile</option>
               </Form.Control>
             </Form.Group>
-
-            <Form.Group className="mt-3" controlId="description">
-              <Form.Label>Description</Form.Label>
+            <Form.Label className="mt-3">Description</Form.Label>
+            <Form.Group className="" controlId="description">
               
+              <textarea placeholder="Description" style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
+              </textarea>
               {uploadingDesc && <Loader />}
-              <MarkdownEditor text={description} onChange={onChange} />
+              {/* <MarkdownEditor text={description} onChange={onChange} /> */}
             </Form.Group>
 
             <Button className="mt-3" type="submit" variant="primary">
