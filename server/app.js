@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://gedi-client.vercel.app"],
+    origin: ["https://ecommerce-client-eight-eosin.vercel.app"],
     methods: ["POST", "GET", "PATCH", "DELETE", "PUT"],
     credentials: true,
   })
