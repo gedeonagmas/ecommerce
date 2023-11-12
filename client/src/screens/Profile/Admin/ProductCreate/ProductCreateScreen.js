@@ -8,7 +8,6 @@ import Loader from "../../../../components/Loader";
 import { createProduct } from "../../../../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../../../../constants/productConstants";
 import DropNotif from "../../../../components/Modal/Modal";
-// import MarkdownEditor from "../../../../components/TextEditor/MarkdownEditor";
 
 const ProductCreateScreen = ({ match, history }) => {
   const [name, setName] = useState("");
@@ -133,13 +132,6 @@ const ProductCreateScreen = ({ match, history }) => {
 
             <Form.Group controlId="image" className="mb-3">
               <Form.Label>Image</Form.Label>
-              {/* <Form.Control
-                className="mb-3"
-                type="text"
-                placeholder="Enter image URL"
-                value={image}
-                onChange={(e) => setImage(e.target.value)}
-              ></Form.Control> */}
               <Form.File id="image-file" custom onChange={uploadFileHandler}></Form.File>
               {uploading && <Loader />}
             </Form.Group>
@@ -191,7 +183,6 @@ const ProductCreateScreen = ({ match, history }) => {
               <textarea placeholder="Description" style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
               </textarea>
               {uploadingDesc && <Loader />}
-              {/* <MarkdownEditor text={description} onChange={onChange} /> */}
             </Form.Group>
 
             <Button className="mt-3" type="submit" variant="primary">
