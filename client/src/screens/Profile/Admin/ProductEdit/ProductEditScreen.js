@@ -11,7 +11,7 @@ import {
 } from "../../../../actions/productActions";
 import { PRODUCT_UPDATE_RESET } from "../../../../constants/productConstants";
 import DropNotif from "../../../../components/Modal/Modal";
-import MarkdownEditor from "../../../../components/TextEditor/MarkdownEditor";
+// import MarkdownEditor from "../../../../components/TextEditor/MarkdownEditor";
 
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id;
@@ -230,8 +230,11 @@ const ProductEditScreen = ({ match, history }) => {
                 custom
                 onChange={uploadImageForDesc}
               ></Form.File>
+              <textarea placeholder="Description" style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
+              </textarea>
               {uploadingDesc && <Loader />}
-              <MarkdownEditor text={description} onChange={onChange} />
+
+              {/* <MarkdownEditor text={description} onChange={onChange} /> */}
             </Form.Group>
 
             <Button className="mt-3" type="submit" variant="primary">
