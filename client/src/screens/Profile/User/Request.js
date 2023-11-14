@@ -9,7 +9,7 @@ import { createRequest } from "../../../actions/requestAction";
 import { REQUEST_SELLER_RESET } from "../../../constants/requestConstant";
 import DropNotif from "../../../components/Modal/Modal";
 
-
+ 
 const Request = ({match, history}) => {
   const [description, setDescription] = useState("");
   const [uploadingDesc, setUploadingDesc] = useState(false);
