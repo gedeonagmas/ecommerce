@@ -111,7 +111,7 @@ const UserProfile = ({ history }) => {
               Manage Orders
             </li>
           )}
-          {userInfo && userInfo.isAdmin && (
+          {userInfo && userInfo.isAdmin='adminys' && (
             <li
               className={classes.navItem}
               data-selection="8"
