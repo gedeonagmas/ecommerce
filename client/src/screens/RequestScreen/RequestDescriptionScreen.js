@@ -53,7 +53,7 @@ const RequestDescriptionScreen = ({ match, history }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-  <textarea placeholder="Description" value={request.description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
+  <textarea placeholder="Description" value={request.description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} name="" id="" cols="50" rows="10">
               </textarea> 
           {!request.approved && (
             <>
