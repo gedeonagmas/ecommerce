@@ -1,4 +1,4 @@
-import MarkdownEditor from "../../../components/TextEditor/MarkdownEditor";
+
 import axios from "axios";
 import React, { useState } from "react";
 import { Container, Form, Button} from "react-bootstrap";
@@ -86,7 +86,8 @@ const Request = ({match, history}) => {
                 onChange={uploadImageForDesc}
               ></Form.File>
               {uploadingDesc && <Loader />}
-              <MarkdownEditor text={description} onChange={onChange} />
+              <textarea placeholder="Description" value={description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
+              </textarea> 
             </Form.Group>
 
             <Button className="mt-3" type="submit" variant="primary">
