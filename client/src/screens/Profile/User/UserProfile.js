@@ -117,7 +117,7 @@ const UserProfile = ({ history }) => {
               data-selection="8"
               onClick={changeSelection}
             >
-              Manage Requests
+              Manage Requests 
             </li>
           )}
         </ul>
