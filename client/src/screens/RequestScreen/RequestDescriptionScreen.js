@@ -32,7 +32,6 @@ const RequestDescriptionScreen = ({ match, history }) => {
     dispatch(approveRequest(requestId));
   };
 
-  // Empty function because this component is only in READING MODE
   const onChange = (value) => {};
 
   return (
