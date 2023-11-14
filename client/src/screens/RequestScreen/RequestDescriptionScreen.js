@@ -53,8 +53,7 @@ const RequestDescriptionScreen = ({ match, history }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-  <textarea placeholder="Description" value={request.description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} name="" id="" cols="50" rows="10">
-              </textarea> 
+         <p>{request.description}</p> 
           {!request.approved && (
             <>
               {loadingApproval && <Loader />}
