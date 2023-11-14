@@ -1,5 +1,4 @@
 import { Container, Button } from "react-bootstrap";
-import MarkdownEditor from "../../components/TextEditor/MarkdownEditor";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../../components/Message";
@@ -54,10 +53,8 @@ const RequestDescriptionScreen = ({ match, history }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <MarkdownEditor
-            text={request.description}
-            onChange={onChange}
-          ></MarkdownEditor>
+  <textarea placeholder="Description" value={request.description} style={{width:'60%',padding:'10px',marginBottom:'5px'}} onChange={(e)=>setDescription(e.target.value)} name="" id="" cols="50" rows="10">
+              </textarea> 
           {!request.approved && (
             <>
               {loadingApproval && <Loader />}
