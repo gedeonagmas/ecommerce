@@ -108,16 +108,7 @@ const UserProfile = ({ history }) => {
               data-selection="7"
               onClick={changeSelection}
             >
-              Manage Orders
-            </li>
-          )}
-          {userInfo && userInfo.isAdmin==='adminys' && (
-            <li
-              className={classes.navItem}
-              data-selection="8"
-              onClick={changeSelection}
-            >
-              Manage requests
+              Manage Orders.
             </li>
           )}
         </ul>
