@@ -111,6 +111,15 @@ const UserProfile = ({ history }) => {
               Manage Orders
             </li>
           )}
+         {userInfo && userInfo.isAdmin && (
+            <li
+              className={classes.navItem}
+              data-selection="8"
+              onClick={changeSelection}
+            >
+              Manage Requests
+            </li>
+          )}
         </ul>
         {selectionShow}
       </div>
