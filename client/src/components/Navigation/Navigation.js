@@ -19,9 +19,7 @@ import {
 } from "./Navigation.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-//
 import Logo16 from "../../media/Logo16.jpg";
-//import logo from "../../media/logo.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../actions/userAction";
 
